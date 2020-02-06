@@ -1,6 +1,7 @@
-package com.javaguru.shoppinglist;
+package shoppinglist.com.javaguru.domain;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Product {
 
@@ -71,5 +72,35 @@ public class Product {
             throw new Exception("The discount cannot exceed the price");
         }
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Product)) return false;
+        Product product = (Product) o;
+        return getId().equals(product.getId()) &&
+                getName().equals(product.getName()) &&
+                getPrice().equals(product.getPrice()) &&
+                getCategory().equals(product.getCategory()) &&
+                Objects.equals(getDescription(), product.getDescription()) &&
+                Objects.equals(getDiscount(), product.getDiscount());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getPrice());
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", category='" + category + '\'' +
+                ", description='" + description + '\'' +
+                ", discount=" + discount +
+                '}';
     }
 }

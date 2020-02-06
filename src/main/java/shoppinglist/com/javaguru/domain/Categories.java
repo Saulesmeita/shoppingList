@@ -1,4 +1,4 @@
-package com.javaguru.shoppinglist;
+package shoppinglist.com.javaguru.domain;
 
 public enum Categories {
     STATIONARY,
