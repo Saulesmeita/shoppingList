@@ -26,11 +26,7 @@ public class Product {
     }
 
     public void setName(String name) throws Exception {
-        if (name.length() >= 3 && name.length() <= 32) {
-            this.name = name;
-        } else {
-            throw new Exception("The name cannot be shorter than 3 symbols or longer than 32 symbols");
-        }
+        this.name = name;
     }
 
     public BigDecimal getPrice() {
@@ -38,11 +34,7 @@ public class Product {
     }
 
     public void setPrice(BigDecimal price) throws Exception {
-        if (price.signum() == 1) {
-            this.price = price;
-        } else {
-            throw new Exception("Price must be nonzero positive");
-        }
+        this.price = price;
     }
 
     public String getCategory() {
@@ -66,12 +58,7 @@ public class Product {
     }
 
     public void setDiscount(BigDecimal discount) throws Exception {
-        if (discount.compareTo(price) <= 0) {
-            this.discount = discount;
-        } else {
-            throw new Exception("The discount cannot exceed the price");
-        }
-
+        this.discount = discount;
     }
 
     @Override

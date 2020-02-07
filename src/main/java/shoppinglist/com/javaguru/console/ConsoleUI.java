@@ -1,12 +1,14 @@
 package shoppinglist.com.javaguru.console;
 
 import shoppinglist.com.javaguru.domain.Product;
-import shoppinglist.com.javaguru.repository.ProductsRepository;
+import shoppinglist.com.javaguru.service.ProductService;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class ConsoleUI {
+
+    private ProductService productService = new ProductService();
 
     public void execute() {
 
@@ -34,7 +36,7 @@ public class ConsoleUI {
         }
     }
 
-    private void createProduct() {
+    private void createProduct() throws Exception {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter product name: ");
         String name = scanner.nextLine();
@@ -53,15 +55,15 @@ public class ConsoleUI {
         product.setPrice(price);
         product.setDiscount(discount);
 
-        System.out.println("Result: " + product.getId());
+        Long id = productService.createProduct(product);
+        System.out.println("New product created, id: " + id);
     }
 
     private void findProductByID() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter product id: ");
         long id = scanner.nextLong();
-        Product findProductResult = ProductsRepository.findByID(id);
+        Product findProductResult = productService.findProductById(id);
         System.out.println(findProductResult);
-
     }
 }
