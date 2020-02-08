@@ -1,0 +1,13 @@
+shoppinglist/com/javaguru/service/ProductService.class
+shoppinglist/com/javaguru/service/Validation/ProductValidationService.class
+shoppinglist/com/javaguru/service/Validation/ProductDiscountAllowedValidationRule.class
+shoppinglist/com/javaguru/domain/Product.class
+shoppinglist/com/javaguru/service/Validation/ProductValidationRule.class
+shoppinglist/com/javaguru/service/Validation/ProductValidationException.class
+shoppinglist/com/javaguru/service/Validation/ProductDiscountValidationRule.class
+shoppinglist/com/javaguru/console/ConsoleUI.class
+shoppinglist/com/javaguru/service/Validation/ProductNameValidationRule.class
+shoppinglist/com/javaguru/service/Validation/ProductPriceValidationRule.class
+shoppinglist/com/javaguru/repository/ProductsRepository.class
+shoppinglist/com/javaguru/service/Validation/ProductNotNullValidationRule.class
+shoppinglist/com/javaguru/domain/Categories.class
