@@ -11,8 +11,8 @@ public class ProductsRepository {
     private Long productIdSequence = 0L;
 
     public Product add(Product product) {
-        product.setId(productIdSequence++);
-        productRepository.put(productIdSequence, product);
+        product.setId(productIdSequence);
+        productRepository.put(productIdSequence++, product);
         return product;
     }
 
