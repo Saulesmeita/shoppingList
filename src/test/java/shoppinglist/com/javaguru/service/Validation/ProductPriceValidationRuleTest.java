@@ -2,6 +2,8 @@ package shoppinglist.com.javaguru.service.Validation;
 
 import org.junit.Test;
 import shoppinglist.com.javaguru.domain.Product;
+import shoppinglist.com.javaguru.service.validation.ProductPriceValidationRule;
+import shoppinglist.com.javaguru.service.validation.ProductValidationException;
 
 import java.math.BigDecimal;
 

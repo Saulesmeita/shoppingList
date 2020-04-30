@@ -2,6 +2,7 @@ package shoppinglist.com.javaguru.service.Validation;
 
 import org.junit.Test;
 import shoppinglist.com.javaguru.domain.Product;
+import shoppinglist.com.javaguru.service.validation.ProductNameValidationRule;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;

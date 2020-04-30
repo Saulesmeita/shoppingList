@@ -1,4 +1,4 @@
-package shoppinglist.com.javaguru.service.Validation;
+package shoppinglist.com.javaguru.service.validation;
 
 public class ProductValidationException extends RuntimeException {
 

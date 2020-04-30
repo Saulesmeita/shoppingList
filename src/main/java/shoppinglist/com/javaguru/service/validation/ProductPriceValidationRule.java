@@ -1,9 +1,11 @@
-package shoppinglist.com.javaguru.service.Validation;
+package shoppinglist.com.javaguru.service.validation;
 
+import org.springframework.stereotype.Component;
 import shoppinglist.com.javaguru.domain.Product;
 
 import java.math.RoundingMode;
 
+@Component
 public class ProductPriceValidationRule implements ProductValidationRule {
 
     @Override

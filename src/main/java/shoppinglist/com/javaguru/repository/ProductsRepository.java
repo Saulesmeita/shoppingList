@@ -1,10 +1,12 @@
 package shoppinglist.com.javaguru.repository;
 
+import org.springframework.stereotype.Component;
 import shoppinglist.com.javaguru.domain.Product;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class ProductsRepository {
 
     private Map<Long, Product> productRepository = new HashMap<>();

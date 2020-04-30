@@ -1,15 +1,19 @@
 package shoppinglist.com.javaguru.console;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import shoppinglist.com.javaguru.domain.Product;
 import shoppinglist.com.javaguru.service.ProductService;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
 
+@Component
 public class ConsoleUI {
 
-    private ProductService productService;
+    private final ProductService productService;
 
+    @Autowired
     public ConsoleUI(ProductService productService) {
         this.productService = productService;
     }

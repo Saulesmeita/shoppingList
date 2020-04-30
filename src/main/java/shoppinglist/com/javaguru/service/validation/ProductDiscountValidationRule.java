@@ -1,10 +1,12 @@
-package shoppinglist.com.javaguru.service.Validation;
+package shoppinglist.com.javaguru.service.validation;
 
+import org.springframework.stereotype.Component;
 import shoppinglist.com.javaguru.domain.Product;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+@Component
 public class ProductDiscountValidationRule implements ProductValidationRule {
 
     @Override

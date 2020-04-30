@@ -1,14 +1,18 @@
 package shoppinglist.com.javaguru.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import shoppinglist.com.javaguru.domain.Product;
 import shoppinglist.com.javaguru.repository.ProductsRepository;
-import shoppinglist.com.javaguru.service.Validation.ProductValidationService;
+import shoppinglist.com.javaguru.service.validation.ProductValidationService;
 
+@Component
 public class ProductService {
 
-    private ProductsRepository repository;
-    private ProductValidationService validationService;
+    private final ProductsRepository repository;
+    private final ProductValidationService validationService;
 
+    @Autowired
     public ProductService(ProductsRepository repository, ProductValidationService validationService) {
         this.repository = repository;
         this.validationService = validationService;
